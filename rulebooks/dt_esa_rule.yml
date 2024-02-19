@@ -11,5 +11,6 @@
     - name: Problem payload Dynatrace for CPU issue
       condition: event.title is match("Test error")
       action:
-        run_playbook:
-          name: playbooks/run-task.yml
+        run_job_template:
+          name: "Trigger test playbook"
+          organization: "Default"  
